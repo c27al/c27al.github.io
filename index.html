@@ -5,9 +5,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet">
 
-
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lacquer&family=Notable&display=swap" rel="stylesheet">
@@ -17,28 +14,36 @@
 
 	<style type="text/css">
 	#record{
-		width:500px;
-		height:400px;
+		width:300px;
+		height:200px;
 		background-image:url(record2.png);
 		background-size:contain;
 		background-repeat: no-repeat;
-		position:absolute;left:10px;top:20%;		
+		display:inline-block;
+		/*position:absolute;
+		left:10px;
+		top:20%;	*/	
 	}
 	#record:hover{
 		background-image:url(record.gif);
 		
-		position:absolute;top:20%;
+		/*position:absolute;
+		top:20%;*/
 	}
-	#vampire:{
-		width:500px;
-		length:400px;
+	#vampire{
+		width:300px;
+		height:200px;
 		background-image:url(olivia.png);
 		background-size:contain;
 		background-repeat: no-repeat;
+		display:inline-block;
+
 	}
-	#butterfly1:{
+	#butterfly1{
 		width:100px:;
-		length:100px;
+		height:100px;
+		display:inline-block;
+
 		background-image:url(butterfly1.png);
 		background-size:contain;
 		background-repeat: no-repeat;
@@ -63,6 +68,14 @@
 
 	}
 
+	.text{
+		position:relative;
+		top:100%;
+		text-align:center;
+		font-size:30px;
+
+	}
+
 	</style>
 
 </head>
@@ -70,16 +83,26 @@
 
 <body>
 	<h1>welcome to my website!</h1>
-	<h2> projects</h2>
 
 <a href="projects.html">
-	<div id="record"></div>
+	<div id="record">
+			<div class="text">projects</div>
+
+	</div>
 
 </a>
+
+
 <a href="journal.html">
-	<div id="vampire"></div>
+	<div id="vampire">
+		
+	<div class="text">journal</div>
+
+	</div>
 	
  </a>
+
+
  <div id="butterfly1"></div>
 
 </body>
