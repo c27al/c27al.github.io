@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#island{
+			width:400px;
+			height:400px;
+			background-image:url(tropicalisland.png);
+			backgrgound-size:contain;
+			background-repeat: no-repeat;
+			position:absolute;
+			left:50px;
+			top:200px;
+		}
+
+		#car{
+			width:200px;
+			height:400px;
+			background-image:url(redcar.png);
+			backgrgound-size:contain;
+			background-repeat: no-repeat;
+			position:absolute;
+			left:200px;
+			top:50px;
+		}
+		#h1{
+			text-align: center;
+			
+		}
+		#jeff{
+			width:100%;
+			height:100%;
+			background-image:url(jeff3.jpg);
+			background-size:contain;
+			background-repeat:no-repeat;
+			position:absolute;
+			
+			opacity:0;
+			animation-delay:3s;
+			animation-iteration-count: 1;
+			animation-name:turn;
+			animation-duration:5s;
+			
+		}
+		</style>
+</head>
+<body>
+	<audio id="scaryscream" src="scaryscream.mp3"></audio>
+	<div id ="island"></div>
+	<div id="car"></div>
+	<div id = "jeff"></div>
+	<h1>drag the car and click it on its final destination!</h1>
+<script type="text/javascript">
+	document.addEventListener("mousemove", function(event){
+		car.style.left = event.clientX -100+"px";
+		car.style.top = event.clientY -100+ "px";
+		console.log(event.clientX, event.clientY)
+	})
+	document.addEventListener("click", function(){
+			jeff.style.opacity = "1"
+			scaryscream.play()
+
+		})
+</script>
+</body>
+</html>

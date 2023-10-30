@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+
+	<style type="text/css">
+		
+		body{
+			background-color:black;
+		}
+
+		#doll{
+			width:400px;
+			height:400px;
+			background-image:url(https://i.etsystatic.com/9003800/r/il/683fd5/4455132946/il_fullxfull.4455132946_dto1.jpg);
+			background-size:contain;
+			background-position:center;
+			
+			background-repeat: no-repeat;
+			opacity:0;
+			animation-delay:3s;
+			animation-iteration-count: 1;
+			animation-name:turn;
+			animation-duration:5s;
+		}
+
+		@keyframes turn{
+
+			0%{
+				transform:rotate(0deg);
+		}
+
+
+			100%{
+				transform:rotate(60deg);
+		}
+}
+	</style>
+
+
+</head>
+
+
+<body>
+
+	<audio id="scream" src="scream.mp3"></audio>
+
+	<div id="doll"></div>
+
+	<script type="text/javascript">
+		document.addEventListener("click", function(){
+			doll.style.opacity = "1"
+			scream.play()
+
+		})
+		document.addEventListener("mousemove", function(event){
+		doll.style.left = event.clientX -94+"px";
+		doll.style.top = event.clientY -150+ "px";
+		console.log(event.clientX, event.clientY)
+	})
+	</script>
+
+</body>
+</html>
