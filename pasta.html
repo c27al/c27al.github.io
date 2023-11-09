@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<style>
+/*		#pasta{*/
+			/*width:200px;
+			height:200px;
+			background-image:url(https://www.billyparisi.com/wp-content/uploads/2023/01/penne-2.jpg);
+			background-size:contain;
+			background-repeat:no-repeat;*/
+/*		}*/
+	</style>
+</head>
+<body>
+	<div id = "pesto"></div>
+<!-- <div id ="pasta"></div> -->
+<script type="text/javascript">
+	
+	function makePasta (){
+		var pasta = document.createElement("div")
+		document.body.appendChild(pasta); 
+		pasta.style.width ="200px";
+		pasta.style.height = "200px";
+		pasta.style.backgroundImage = "url(https://www.billyparisi.com/wp-content/uploads/2023/01/penne-2.jpg)";
+		pasta.style.backgroundSize = "contain";
+		pasta.style.backgroundRepeat = "no-repeat";
+		pasta.style.display = "inline-block";
+		// 1. make a div
+		// 2. put the div in the body
+		// 3. style the div
+		pasta.addEventListener("click", function(){
+		pasta.style.opacity="100"
+		pasta.style.backgroundImage = "url(https://www.lastingredient.com/wp-content/uploads/2014/04/pea-pesto1.jpg)"
+	})
+
+	}
+	
+	setInterval(makePasta, 100)
+	</script>
+</body>
+</html>
