@@ -14,6 +14,7 @@
 	</style>
 </head>
 <body>
+	<audio id="bite" src="bite.mp3"></audio>
 	<div id = "pesto"></div>
 <!-- <div id ="pasta"></div> -->
 <script type="text/javascript">
@@ -33,11 +34,13 @@
 		pasta.addEventListener("click", function(){
 		pasta.style.opacity="100"
 		pasta.style.backgroundImage = "url(https://www.lastingredient.com/wp-content/uploads/2014/04/pea-pesto1.jpg)"
+		bite.play()
 	})
 
 	}
 	
 	setInterval(makePasta, 100)
 	</script>
+	<h1> Click on the pasta for a surprise! </h1>
 </body>
 </html>
