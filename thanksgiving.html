@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+	<title></title>
+	<style>
+		#thanksgiving{
+			width:100%;
+			height:1000px;
+			background-image:url(fallbackground.png);
+			
+		
+		}
+		#darius{
+			width:400px;
+			height:200px;
+			background-image:url(darius.jpg);
+			background-repeat:no-repeat;
+			background-size: contain;
+			display: inline-block;
+		}
+		#michael{
+			width:200px;
+			height:400px;
+			background-image:url(michael.jpg);
+			background-repeat:no-repeat;
+			background-size: contain;
+			display:inline-block;
+		}
+		.square{
+			width:250px;
+			height:200px;
+			background-color:yellowgreen;
+			background-image:url(fallleaf.png);
+			margin:10px;
+			opacity:0;
+			background-repeat: no-repeat;
+			background-size: contain;
+			display: inline-block;
+		}
+
+		h1{
+			font-family: 'Agbalumo', sans-serif;
+			left:50%;
+			top:50%;
+
+		}
+		div{
+			font-family: 'Agbalumo', sans-serif;
+		}
+	</style>
+</head>
+<body>
+	
+	<div id = "thanksgiving">
+	
+
+	
+	<h1>Press a key to see things I am grateful for. Happy Thanksgiving!</h1>
+
+<div class="square" id = "one">thank you for feeding me!</div>
+<div class="square" id = "two">thank you for providing me with a house!</div>
+<div class="square" id = "three">thank you for sending me to school!</div>
+<div class="square" id = "four">thank you for buying me clothes!</div>
+<div class="square" id = "five">thank you for getting me tickets to taylor swift!</div>
+	</div>
+
+<script type="text/javascript">
+
+
+	var clickCounter = 0
+
+	document.addEventListener("keypress", function(){
+		clickCounter = clickCounter +1
+		console.log(clickCounter)
+
+		if (clickCounter == 1){
+			one.style.opacity = "1"
+			five.style.opacity = "0"
+		}
+
+		if (clickCounter == 2){
+			three.style.opacity = "1"
+			one.style.opacity = "0"
+			five.style.opacity = "0"
+
+		}
+
+		if (clickCounter == 3){
+			two.style.opacity = "1"
+			three.style.opacity = "0"
+			five.style.opacity = "0"
+
+		}
+		if (clickCounter == 4){
+			two.style.opacity = "0"
+			three.style.opacity = "0"
+			five.style.opacity = "1"
+
+		}
+		if (clickCounter == 5){
+			two.style.opacity = "0"
+			three.style.opacity = "0"
+			five.style.opacity = "1"
+			four.style.opacity = "0"
+			clickCounter = 0
+		}
+
+	})
+
+</script>
+</body>
+</html>
