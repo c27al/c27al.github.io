@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santa's Present Delivery</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    canvas {
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  document.body.appendChild(canvas);
+
+  // Set canvas size
+  canvas.width = 800;
+  canvas.height = 400;
+
+  // Santa's initial position
+  let santaX = 50;
+  let santaY = canvas.height - 50;
+
+  // Function to generate a random position for the present
+  function generateRandomPresentPosition() {
+    return {
+      x: Math.floor(Math.random() * (canvas.width - 20)),
+      y: Math.floor(Math.random() * (canvas.height - 20))
+    };
+  }
+
+  // Randomized present position
+  let presentPosition = generateRandomPresentPosition();
+
+  // Function to draw Santa and presents
+  function draw() {
+    // Clear the canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw Santa
+    ctx.fillStyle = '#FF0000';
+    ctx.fillRect(santaX, santaY - 20, 40, 20);
+
+    // Draw Present
+    ctx.fillStyle = '#00FF00';
+    ctx.fillRect(presentPosition.x, presentPosition.y - 20, 20, 20);
+  }
+
+  // Function to update game state
+  function update() {
+    // Check if Santa reached the present
+    if (santaX + 40 >= presentPosition.x && santaX <= presentPosition.x + 20 &&
+        santaY === presentPosition.y - 20) {
+      alert('Congratulations! Santa delivered the presents!');
+      resetGame();
+    }
+
+    // Check if Santa reached the end of the canvas
+    if (santaX > canvas.width) {
+      alert('Oops! Santa didn\'t make it in time. Try again!');
+      resetGame();
+    }
+  }
+
+  // Function to reset the game
+  function resetGame() {
+    santaX = 50;
+    santaY = canvas.height - 50;
+    presentPosition = generateRandomPresentPosition();
+  }
+
+  // Function to handle keyboard input
+  function handleKeyPress(event) {
+    if (event.code === 'ArrowUp' && santaY > 0) {
+      santaY -= 10;
+    } else if (event.code === 'ArrowDown' && santaY < canvas.height - 20) {
+      santaY += 10;
+    } else if (event.code === 'ArrowLeft' && santaX > 0) {
+      santaX -= 10;
+    } else if (event.code === 'ArrowRight' && santaX < canvas.width - 40) {
+      santaX += 10;
+    }
+
+    draw();
+  }
+
+  // Set up event listener for keyboard input
+  window.addEventListener('keydown', handleKeyPress);
+
+  // Main game loop
+  function gameLoop() {
+    update();
+    draw();
+    requestAnimationFrame(gameLoop);
+  }
+
+  // Start the game loop
+  gameLoop();
+</script>
+
+</body>
+</html>
