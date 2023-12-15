@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<style type="text/css">
+		#bowl{
+			height: 200px;
+			width:200px;
+			background-image:url(bowl.png);
+			background-size: contain;
+			background-repeat:no-repeat;
+			position:absolute;
+			top:35%;
+			left:40%;
+		}
+		.noodles{
+			height:130px;
+			width:130px;
+			background-size:contain;
+			background-repeat:no-repeat;
+			display:inline-block;
+		}
+		.sauces{
+			height:130px;
+			width:130px;
+			background-size:contain;
+			background-repeat:no-repeat;
+			display:inline-block;
+		}
+		.toppings{
+			height:100px;
+			width:100px;
+			background-size:contain;
+			background-repeat:no-repeat;
+			display:inline-block;
+		}
+		
+		#spaghetti{
+			background-image:url(spaghetti.png);
+		}
+		#penne{
+			background-image:url(penne.png);
+		}
+		#macaroni{
+			background-image:url(mac2.png);
+		}
+		#pesto{
+			background-image:url(pesto.png);
+		}
+		#tomato{
+			background-image:url(tomatosauce.png);
+		}
+		#cheesey{
+			background-image:url(cheesey.png);
+		}
+		#cheese{
+			background-image:url(cheese.png);
+		}
+		#broccoli{
+			background-image:url(broccoli.png);
+		}
+		#basil{
+			background-image:url(basil.png);
+		}
+	</style>
+</head>
+<body>
+	<h1>Click on your choice of noodles, sauce, and toppings to make a bowl of pasta!</h1>
+	<div id ="bowl"></div>
+	<div id ="spaghetti" class = "noodles"></div>
+	<div id = "penne" class ="noodles"></div>
+	<div id = "macaroni" class ="noodles"></div>
+	<div id = "pesto" class ="sauces"></div>
+	<div id = "tomato" class ="sauces"></div>
+	<div id = "cheesey" class ="sauces"></div>
+	<div id = "cheese" class ="toppings"></div>
+	<div id = "broccoli" class ="toppings"></div>
+	<div id = "basil" class ="toppings"></div>
+
+<script type="text/javascript">
+	var x;
+	var image;
+	
+    // function makeTopping() {
+    //     var make = document.createElement("div");
+    //     var angle = Math.floor((Math.random() * 360) + 1);
+    //     document.body.appendChild(make);
+    //     make.classList.add("x");
+    //     make.innerText = image
+    //     make.style.backgroundImage = "url("+image +")"
+    //   	make.style.left = event.clientX + "px";
+    //   	make.style.top = event.clientY + "px"
+      	
+spaghetti.addEventListener("click", function(){
+	image = "spaghetti.png"
+		})
+penne.addEventListener("click", function(){
+	
+	image = "penne.png"
+		
+		})
+macaroni.addEventListener("click", function(){
+	image = "mac2.png"
+		})
+pesto.addEventListener("click", function(){
+	image = "pesto.png"
+		})
+tomato.addEventListener("click", function(){
+	image = "tomatosauce.png"
+		})
+cheesey.addEventListener("click", function(){
+	image = "cheesey.png"
+		})
+
+
+cheese.addEventListener("click", function(){
+	image = "cheese.png"
+		})
+
+
+broccoli.addEventListener("click", function(){
+	image = "broccoli.png"
+
+		})
+
+
+basil.addEventListener("click", function(){
+	image = "basil.png"
+		})
+
+
+
+
+bowl.addEventListener("click", function(){
+	var whatever = document.createElement('div')
+	whatever.classList.add("toppings")
+	document.body.appendChild(whatever)
+	whatever.style.left = event.clientX + "px"
+	whatever.style.top = event.clientY + "px"
+	whatever.style.position="absolute"
+	whatever.style.backgroundImage = "url("+image+")"
+})
+
+
+	
+
+	</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
