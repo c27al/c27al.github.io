@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+<style type="text/css">
+	body{
+		background-color:lightblue;
+
+	}
+
+	.trees{
+		width: 200px;
+		height: 200px;
+		background-repeat: no-repeat;
+		display: inline-block;
+		background-size:contain;
+	}
+
+	#tree{
+		height:700px;
+		width:500px;
+		background-image:url(tree.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		
+
+	}
+	#adia{
+		height:200px;
+		width:200px;
+		background-image:url(adia.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		display: inline-block;
+
+	}
+	#coby{
+		height:200px;
+		width:200px;
+		background-image:url(coby.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		display: inline-block;
+		
+	}
+</style>
+</head>
+<body>
+	<div id="music">
+	<audio controls autoplay>
+  	<source src="christmas.mp3"></source></audio>
+
+ </div> 
+<div id ="adia" class="trees"></div>
+<div id ="coby" class="trees"></div>
+	<h1>Happy Holidays! Click on the Adia and Cobys, then click on the tree to decorate it!</h1>
+	 
+<div id ="tree" class="trees"></div>
+<h1>Love, your favorite PLers </h1>
+
+<script type="text/javascript">
+
+	var image ="blah";
+
+ adia.addEventListener("click", function(){
+ 	image = "adia.png"
+ 	console.log("adia")
+ 		})
+ coby.addEventListener("click", function(){
+ 	
+ 	image = "coby.png"
+ 	console.log("coby")
+ 		
+ 		})
+ 
+
+tree.addEventListener("click", function decoTree()
+
+{
+
+
+ 	var whatever = document.createElement('div')
+ 	whatever.classList.add("trees")
+ 	document.body.appendChild(whatever)
+ 	whatever.style.left = event.clientX + "px"
+ 	whatever.style.top = event.clientY + "px"
+ 	whatever.style.height = "100px"
+ 	whatever.style.width = "100px"
+ 	whatever.style.position="absolute"
+ 	whatever.style.backgroundImage = "url("+image+")"
+ })
+
+
+ 	
+
+ 	</script>
+
+
+
+
+
+
+
+
+
+ </body>
+ </html>
+
+</body>
+</html>
