@@ -11,31 +11,29 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
 	<style type="text/css">
 	#record{
 		width:400px;
 		height:400px;
-		background-image:url(record2.png);
+		background-image:url(seasponge.png);
 		background-size:contain;
 		background-repeat: no-repeat;
 		display:inline-block;
 		position:absolute;left:60%;
-		top:25%;
+		top:15%;
 		/*position:absolute;
 		left:10px;
 		top:20%;	*/	
 	}
-	#record:hover{
-		background-image:url(record.gif);
-		
-		/*position:absolute;
-		top:20%;*/
-	}
+	
 	#vampire{
 		width:400px;
 		height:400px;
-		background-image:url(olivia.png);
+		background-image:url(shell.png);
 		background-size:contain;
 		background-repeat: no-repeat;
 		display:inline-block;
@@ -47,20 +45,22 @@
 	#butterfly1{
 		width:100px:;
 		height:100px;
-		background-image:url(butterfly1.png);
+		background-image:url(whitestar.png);
 		background-size:contain;
 		background-repeat: no-repeat;
 	}
-	
+	a{
+		color:white;
+	}
 	body{
-		background-color:mediumpurple;
+		background-color:navy;
 		color:white;
 
 	}
 
 	h1{
-		font-family: 'Notable', sans-serif;
-		text-decoration-color: white;
+		font-family: 'Playfair Display', serif;
+		text-decoration-color: navy;
 		text-align: center;
 
 
@@ -72,24 +72,21 @@
 
 	}
 
-	.text{
+	#projects{
 		position:relative;
-		top:80%;
+		top:108%;
 		text-align:center;
 		font-size:30px;
 
 	}
 	#journal{
-		position:absolute;left:37%;
-		top:94%;
+		position:absolute;
+		left:37%;
+		top:97%;
 		font-size:30px;
 
 	}
-#music{
-	position:absolute;
-	left:2px;
-	top:2px;
-}
+
 	</style>
 
 
@@ -101,7 +98,7 @@
 
 <a href="projects.html">
 	<div id="record">
-			<div class="text">projects</div>
+			<div id="projects">projects</div>
 
 	</div>
 
@@ -119,9 +116,7 @@
 
 
  <div id="butterfly1"></div>
-<div id="music">
-	<audio controls autoplay>
-  	<source src="dejavu.mp3"></source></audio>
+
 
  </div>  
 
