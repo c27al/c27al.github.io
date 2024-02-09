@@ -3,10 +3,40 @@
 <head>
 	
 	<title></title>
+
+
+<style>
+	#plate{
+		width:300px;
+		height:300px;
+		border:1px solid black;
+		background-size:contain;
+		background-position: center;
+		background-repeat: no-repeat;
+
+	}
+body{
+		background-color:powderblue;
+
+	}
+</style>
 </head>
 <body>
-
-	<h1><center>Having trouble deciding what to eat for dinner? Click on the screen to see what you should eat.</center></h1>
+<h1><center>Having trouble deciding what to eat for dinner? Click on the screen to see what you should eat.</center></h1>
+<div id = "background"></div>
+	<center><div id="plate"></div></center>
+<!-- <div id = "sushi"></div>
+<div id = "salad"></div>
+<div id = "burger"></div>
+<div id = "pasta"></div>
+<div id = "chicken"></div>
+<div id = "pizza"></div>
+<div id = "tacos"></div>
+<div id = "burrito"></div>
+<div id = "wrap"></div>
+<div id = "dumplings"></div>
+<div id = "stir-fry"></div> -->
+	
 <script type = "text/javascript">
 	var dinner = [
 		"sushi",
@@ -22,12 +52,14 @@
 		"stir-fry",
 
 		]
-	
+	var food = [
+		"url(https://i.pinimg.com/564x/f0/c9/99/f0c999b7487ff0fdf83c1942ad6aa41a.jpg)", "url(https://i.pinimg.com/564x/44/2a/1f/442a1f87a5b8784db29e3008f2897f99.jpg)", "url(https://i.pinimg.com/564x/d0/99/2c/d0992ce50894883c916944f574cc839e.jpg)", "url(https://i.pinimg.com/736x/fc/00/e0/fc00e084f86b950e0a795e14005cd8a7.jpg)", "url(https://i.pinimg.com/474x/4f/ed/02/4fed027e6c8f65e84e1ebe1fa9678018.jpg)", "url(https://i.pinimg.com/564x/8c/1c/db/8c1cdb66333c2bb0e48ab50fd985a79c.jpg)", "url(https://i.pinimg.com/564x/d2/0e/0b/d20e0bff995b969e5f9b7ef3947a678f.jpg)", "url(https://i.pinimg.com/564x/cc/45/37/cc453702986eace99890d43e367e8572.jpg)", "url(https://i.pinimg.com/564x/8d/0b/ba/8d0bba9be9670344271177caf4233db2.jpg)", "url(https://i.pinimg.com/564x/3e/23/30/3e2330a0f9d06e7f21117debdfda9717.jpg)", "url(https://i.pinimg.com/564x/4c/c4/6a/4cc46a85726b0cc8dfe685dc6a1d35a5.jpg)"];
 	
 	document.addEventListener("click", function(){
+		document
 		var x = Math.round(Math.random()*10);
-		console.log(dinner[x])
-		document.body.innerText=dinner[x]
+		console.log(food[x])
+		plate.style.backgroundImage=food[x]
 	})
 </script>
 </body>
