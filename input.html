@@ -4,10 +4,17 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
+	<style>
+		
+	body{
+		background-color: powderblue;
+	}
+	</style>
 </head>
 <body>
-Roses are red, violets are blue<br>
-You are an angel and <input id = "word"></input> too
+
+<h1>Try to guess my favorite color!</h1><br>
+ <input id = "word"></input> 
 <button id =submit>submit</button>
 <script type="text/javascript">
 	
@@ -16,12 +23,58 @@ You are an angel and <input id = "word"></input> too
 			console.log(word.value)
 			
 		
-		if(word.value == "cat"){
-			alert("omg, you're the one")
+		if(word.value == "pink"){
+			
+			document.body.style.backgroundColor = "pink"
+			alert("Good job! you got it.")
 		}
-
+		else if(word.value == "red"){
+			document.body.style.backgroundColor = "red"
+			alert("It's not " + word.value +". try again!")
+			
+		}
+		else if(word.value == "orange"){
+			document.body.style.backgroundColor = "orange"
+			alert("It's not " + word.value +". try again!")
+			
+			
+			
+		}
+		else if(word.value == "yellow"){
+			document.body.style.backgroundColor = "yellow"
+			alert("It's not " + word.value +". try again!")
+			
+			
+		}
+		else if(word.value == "green"){
+			document.body.style.backgroundColor = "green"
+			alert("It's not " + word.value +". try again!")
+			
+		}
+		else if(word.value == "blue"){
+			document.body.style.backgroundColor = "blue"
+			alert("It's not " + word.value +". try again!")
+			
+		}
+		else if(word.value == "purple"){
+			document.body.style.backgroundColor = "purple"
+			alert("It's not " + word.value +". try again!")
+			
+		}
+		else if(word.value == "brown"){
+			document.body.style.backgroundColor = "brown"
+			alert("It's not " + word.value +". try again!")
+			
+		}
+		else if(word.value == "turquoise"){
+			document.body.style.backgroundColor = "turquoise"
+			alert("It's not " + word.value +". try again!")
+			
+		}
+		
 		else{
-			alert("you're not " + word.value +" you're a poop face")
+			alert("It's not " + word.value +". try again!")
+
 
 		}
 	})
